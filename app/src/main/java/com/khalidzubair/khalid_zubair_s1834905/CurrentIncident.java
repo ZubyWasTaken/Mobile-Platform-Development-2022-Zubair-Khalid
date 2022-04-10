@@ -1,19 +1,21 @@
+/*
+ * Name: Zubair Khalid
+ * Matriculation Number: S1843905
+ */
+
 package com.khalidzubair.khalid_zubair_s1834905;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
 import android.os.StrictMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -25,7 +27,6 @@ public class CurrentIncident extends Fragment {
     private TextView link;
     private TextView georss;
     private TextView publishDate;
-
     private ArrayList<RSSItem> itemsView;
 
     public CurrentIncident() {
@@ -68,6 +69,7 @@ public class CurrentIncident extends Fragment {
         return view;
     }
 
+    @SuppressLint("SetTextI18n")
     public void updateDisplay() {
         if (itemsView == null) {
             Context context = getActivity().getApplicationContext();
