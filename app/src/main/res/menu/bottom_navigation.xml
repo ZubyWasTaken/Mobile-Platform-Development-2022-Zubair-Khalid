@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Name: Zubair Khalid
+    Matriculation Number: S1843905 -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_roadworks"
         android:icon="@drawable/ic_roadworks"
-        android:title="Roadworks"
+        android:title="@string/roadworks"
         />
     <item
         android:id="@+id/nav_currentincidents"
         android:icon="@drawable/ic_currentincidents"
-        android:title="Incidents"
+        android:title="@string/incidents"
         />
     <item
         android:id="@+id/nav_plannedroadworks"
         android:icon="@drawable/ic_plannedroadworks"
-        android:title="Planned Roadworks"
+        android:title="@string/planned_roadworks"
         />
 </menu>
