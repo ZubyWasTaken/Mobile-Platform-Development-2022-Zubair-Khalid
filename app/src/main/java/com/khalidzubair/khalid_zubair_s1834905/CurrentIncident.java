@@ -49,11 +49,11 @@ public class CurrentIncident extends Fragment {
 
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Current Incidents");
 
-        title = (TextView) view.findViewById(R.id.titleTextView);
-        description = (TextView) view.findViewById(R.id.descriptionTextView);
-        link = (TextView) view.findViewById(R.id.linkTextView);
-        georss = (TextView) view.findViewById(R.id.geoTextView);
-        publishDate = (TextView) view.findViewById(R.id.publishDateTextView);
+        title = view.findViewById(R.id.titleTextView);
+        description = view.findViewById(R.id.descriptionTextView);
+        link = view.findViewById(R.id.linkTextView);
+        georss = view.findViewById(R.id.geoTextView);
+        publishDate = view.findViewById(R.id.publishDateTextView);
 
         try {
             String STRING_URL = "https://trafficscotland.org/rss/feeds/currentincidents.aspx";
