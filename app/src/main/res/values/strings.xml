@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Traffic Scotland</string>
+    <string name="item_pub_date">Published: Fri 08 April 2022</string>
+    <string name="item_title">Item title</string>
+    <string name="item_description">Item description</string>
+    <string name="item_link">Read more on the website</string>
+    <string name="geo_point">The coordinates</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
