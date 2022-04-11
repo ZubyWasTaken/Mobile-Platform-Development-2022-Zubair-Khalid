@@ -12,56 +12,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/titleTextView"
+        <ListView
+            android:id="@+id/itemsListView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="7dp"
-            android:paddingTop="5dp"
-            android:paddingRight="7dp"
-            android:text="@string/item_title"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/descriptionTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="7dp"
-            android:paddingTop="2dp"
-            android:text="@string/item_description"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/linkTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="7dp"
-            android:paddingTop="2dp"
-            android:paddingRight="7dp"
-            android:text="@string/item_link"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/geoTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="7dp"
-            android:paddingTop="2dp"
-            android:paddingRight="7dp"
-            android:text="geo"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/publishDateTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingLeft="7dp"
-            android:paddingTop="2dp"
-            android:text="@string/item_pub_date"
-            android:textSize="18sp" />
-
-
+        </ListView>
     </LinearLayout>
 </FrameLayout>

@@ -9,24 +9,25 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import android.os.StrictMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class CurrentIncident extends Fragment {
 
-    private TextView title;
-    private TextView description;
-    private TextView link;
-    private TextView georss;
-    private TextView publishDate;
+    SimpleAdapter adapter;
+    ListView itemsListView;
     private ArrayList<RSSItem> itemsView;
 
     public CurrentIncident() {
@@ -49,11 +50,8 @@ public class CurrentIncident extends Fragment {
 
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Current Incidents");
 
-        title = view.findViewById(R.id.titleTextView);
-        description = view.findViewById(R.id.descriptionTextView);
-        link = view.findViewById(R.id.linkTextView);
-        georss = view.findViewById(R.id.geoTextView);
-        publishDate = view.findViewById(R.id.publishDateTextView);
+        itemsListView = view.findViewById(R.id.itemsListView);
+
 
         try {
             String STRING_URL = "https://trafficscotland.org/rss/feeds/currentincidents.aspx";
@@ -79,13 +77,30 @@ public class CurrentIncident extends Fragment {
             toast.show();
             return;
         }
-        for (RSSItem it : itemsView) {
-            title.setText("Title: " + it.getTitle());
-            description.setText("Description: " + it.getDescription());
-            link.setText("Link: " + it.getLink());
-            georss.setText("Coordinates: " + it.getGeoRSS());
-            publishDate.setText("Publication Date: " + it.getPublishDate());
+
+
+        ArrayList<HashMap<String, String>> list = new ArrayList<>();
+        for (RSSItem item : itemsView) {
+            HashMap<String, String> map = new HashMap<String, String>();
+            map.put("publishDate", ("Publication Date: " + item.getPublishDateFormatted()));
+            map.put("title", ("Title: " + item.getTitle()));
+            map.put("description", ("Description: " + item.getDescription()));
+            map.put("link", ("Link: " + item.getLink()));
+            map.put("geoRSS", ("Coordinates: " + item.getGeoRSS()));
+            list.add(map);
         }
+
+        int resource = R.layout.listview_incident;
+
+        String[] from = {"publishDate", "title", "description", "link", "geoRSS"};
+        int[] to = {R.id.publishDateTextView, R.id.titleTextView,
+                R.id.descriptionTextView, R.id.linkTextView, R.id.geoTextView};
+
+        if (getActivity() != null) {
+            adapter = new SimpleAdapter(getActivity(), list, resource, from, to);
+            itemsListView.setAdapter(adapter);
+        }
+
 
 
     }

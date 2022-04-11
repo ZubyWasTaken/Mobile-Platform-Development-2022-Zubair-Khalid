@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/layout-land/fragment_current_incident.xml" value="0.44929453262786595" />
         <entry key="app/src/main/res/layout-land/fragment_planned_roadworks.xml" value="0.373015873015873" />
         <entry key="app/src/main/res/layout-land/fragment_roadworks.xml" value="0.2570546737213404" />
+        <entry key="app/src/main/res/layout-land/listview_incident.xml" value="0.45943562610229277" />
         <entry key="app/src/main/res/layout-land/listview_roadworks.xml" value="0.44929453262786595" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_current_incident.xml" value="0.5307291666666667" />
@@ -19,7 +20,8 @@
         <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.2512664640324215" />
         <entry key="app/src/main/res/layout/fragment_planned_roadwork.xml" value="0.3120471014492754" />
         <entry key="app/src/main/res/layout/fragment_planned_roadworks.xml" value="0.440625" />
-        <entry key="app/src/main/res/layout/fragment_roadworks.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_roadworks.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/listview_incident.xml" value="0.4791666666666667" />
         <entry key="app/src/main/res/layout/listview_roadworks.xml" value="0.5307291666666667" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.30364583333333334" />
       </map>
