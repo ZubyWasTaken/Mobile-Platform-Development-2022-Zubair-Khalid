@@ -74,14 +74,6 @@ public class PlannedRoadworks extends Fragment {
     }
 
     public void updateDisplay() {
-        if (itemsView == null) {
-            Context context = getActivity().getApplicationContext();
-            CharSequence text = "RSS feed is unable to load";
-            int duration = Toast.LENGTH_LONG;
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-            return;
-        }
 
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
         for (RSSItem item : itemsView) {

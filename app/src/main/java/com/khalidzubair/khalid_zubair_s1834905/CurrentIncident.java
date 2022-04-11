@@ -69,15 +69,6 @@ public class CurrentIncident extends Fragment {
 
     @SuppressLint("SetTextI18n")
     public void updateDisplay() {
-        if (itemsView == null) {
-            Context context = getActivity().getApplicationContext();
-            CharSequence text = "Unable to get RSS feed";
-            int duration = Toast.LENGTH_LONG;
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-            return;
-        }
-
 
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
         for (RSSItem item : itemsView) {
