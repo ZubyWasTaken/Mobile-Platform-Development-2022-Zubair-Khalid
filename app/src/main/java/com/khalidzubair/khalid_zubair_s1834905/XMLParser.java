@@ -42,15 +42,15 @@ public class XMLParser {
                 } else if (eventType == XmlPullParser.START_TAG) {
                     if (xmlPP.getName().equals("item")) {
                         item = new RSSItem();
-                        eventType = xmlPP.nextTag();
+                        xmlPP.nextTag();
                         if (xmlPP.getName().equals("title")) {
-                            eventType = xmlPP.next();
+                            xmlPP.next();
                             item.setTitle(xmlPP.getText());
-                            eventType = xmlPP.nextTag();
-                            eventType = xmlPP.nextTag();
+                            xmlPP.nextTag();
+                            xmlPP.nextTag();
                         }
                         if (xmlPP.getName().equals("description")) {
-                            eventType = xmlPP.next();
+                            xmlPP.next();
                             item.setDescription(helper.getDescription(xmlPP.getText()));
                             String[] dates = helper.getDates(xmlPP.getText());
 
@@ -58,32 +58,32 @@ public class XMLParser {
                                 item.setStartDate(helper.longDateToShort(dates[0]));
                                 item.setEndDate(helper.longDateToShort(dates[1]));
                             }
-                            eventType = xmlPP.nextTag();
-                            eventType = xmlPP.nextTag();
+                            xmlPP.nextTag();
+                            xmlPP.nextTag();
                         }
                         if (xmlPP.getName().equals("link")) {
-                            eventType = xmlPP.next();
+                            xmlPP.next();
                             item.setLink(xmlPP.getText());
-                            eventType = xmlPP.nextTag();
-                            eventType = xmlPP.nextTag();
+                            xmlPP.nextTag();
+                            xmlPP.nextTag();
                         }
                         if (xmlPP.getName().equals("point")) {
-                            eventType = xmlPP.next();
+                            xmlPP.next();
                             item.setGeoRSS(xmlPP.getText());
-                            eventType = xmlPP.nextTag();
-                            eventType = xmlPP.nextTag();
+                            xmlPP.nextTag();
+                            xmlPP.nextTag();
                         }
-                        eventType = xmlPP.nextTag();
-                        eventType = xmlPP.nextTag();
-                        eventType = xmlPP.nextTag();
-                        eventType = xmlPP.nextTag();
+                        xmlPP.nextTag();
+                        xmlPP.nextTag();
+                        xmlPP.nextTag();
+                        xmlPP.nextTag();
 
                         if (xmlPP.getName().equals("pubDate")) {
-                            eventType = xmlPP.next();
+                            xmlPP.next();
                             item.setPublishDate(xmlPP.getText());
                             Log.v("check data", xmlPP.getText());
-                            eventType = xmlPP.nextTag();
-                            eventType = xmlPP.nextTag();
+                            xmlPP.nextTag();
+                            xmlPP.nextTag();
                         }
                         items.add(item);
                     }

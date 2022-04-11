@@ -57,7 +57,7 @@ public class PlannedRoadworks extends Fragment {
 
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Planned Roadworks");
 
-        itemsListView = (ListView) view.findViewById(R.id.itemsListView);
+        itemsListView = view.findViewById(R.id.itemsListView);
 
         try {
             String STRING_URL = "https://trafficscotland.org/rss/feeds/plannedroadworks.aspx";
